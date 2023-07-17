@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import Result from "./components/result";
 
 
@@ -18,8 +17,8 @@ function App() {
 
 
     return (
-        <div className="bg-[#6699ff] h-max ">
-            <div className={`mx-[30px] pb-[20px]`}>
+        <div className="bg-[#6699ff] h-screen ">
+            <div className={`mx-[30px] `}>
                 <h1 className={`text-5xl font-bold text-white w-fit m-auto pt-[20px]`}>MOPPPS</h1>
                 <form onSubmit={HandleLinkForm}>
                     <div className={`h-[50px] grid grid-cols-form mt-[30px]`}>

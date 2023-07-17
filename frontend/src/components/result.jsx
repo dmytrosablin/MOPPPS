@@ -14,7 +14,7 @@ const Result = (props) => {
         fetchLinks()
     }, [])
     return (
-        <div className={`bg-white w-fit m-auto mt-[30px] rounded-3xl p-[20px]`}>
+        <div className={`bg-white  w-fit m-auto mt-[30px] rounded-3xl p-[20px]`}>
             {props.linki && props.linki.map(link => <One link={link}/>)}
         </div>
     )
