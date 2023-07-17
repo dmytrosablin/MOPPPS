@@ -13,7 +13,7 @@ const Result = (props) => {
             }
         }
         fetchLinks()
-    }, [() => {}])
+    }, [])
     return (
         <div className={`bg-white sm:w-[500px] mb-[30px]  w-fit m-auto mt-[30px] rounded-3xl p-[20px]`}>
             {props.linki && props.linki.map(link => <One link={link}/>)}
