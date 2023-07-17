@@ -17,7 +17,7 @@ function App() {
 
 
     return (
-        <div className="bg-[#6699ff] h-screen ">
+        <div className="bg-[#6699ff] h-screen">
             <div className={`mx-[30px] `}>
                 <h1 className={`text-5xl font-bold text-white w-fit m-auto pt-[20px]`}>MOPPPS</h1>
                 <form onSubmit={HandleLinkForm}>
