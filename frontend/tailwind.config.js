@@ -12,7 +12,8 @@ module.exports = {
       }
     },
     screens: {
-      'phone': '100px'
+      'phone': '100px',
+      'pc': '1200px'
     }
   },
   plugins: [
