@@ -1,8 +1,18 @@
 import React, {useEffect} from "react";
 import One from "./one";
+import axios from "axios";
+
 
 const Result = (props) => {
     useEffect(() =>  {
+        // console.log('start')
+        // axios.get(`https://mopppsik.onrender.com/api/sinobot`).then((response) => {
+        //     console.log(response.data)
+        //     // const json = response.json()
+        //
+        //         props.setLinki(response.data)
+        //
+        // })
         const fetchLinks = async () => {
             console.log('start')
             const response = await fetch(`/api/${props.input}`)

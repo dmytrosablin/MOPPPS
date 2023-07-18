@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{html,js,jsx}", "./public/*.{html, js}"],
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       gridTemplateColumns: {
@@ -8,7 +11,7 @@ module.exports = {
         'mobileform': 'auto 200px 50px auto'
       },
       backgroundImage: {
-        'search': 'url("/assets/search.svg")'
+        'search': 'url("/src/assets/search.svg")'
       }
     },
     screens: {
@@ -16,7 +19,6 @@ module.exports = {
       'pc': '1200px'
     }
   },
-  plugins: [
-
-  ]
+  plugins: [],
 }
+

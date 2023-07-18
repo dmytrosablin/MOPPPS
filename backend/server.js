@@ -4,6 +4,8 @@ const cheerio = require("cheerio");
 
 const app = express();
 
+app.use(express.static('dist'))
+
 app.get('/api/:reqvst', async (req, res, next) => {
     const {reqvst} = req.params
 
