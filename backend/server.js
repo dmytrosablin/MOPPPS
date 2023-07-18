@@ -1,13 +1,28 @@
+const Link = require('./models/linkModel')
 const express = require('express');
 const unirest = require("unirest");
 const cheerio = require("cheerio");
+const mongoose = require("mongoose");
 
 const app = express();
 
 app.use(express.static('dist'))
 
+mongoose.connect("mongodb+srv://dmytrosablin:SmIATCbPzS9G5EwQ@moppps.vqpw7qc.mongodb.net/?retryWrites=true&w=majority")
+    .then(() => {
+        console.log('Mongo db connected')
+        app.listen(4000, () => {
+            console.log(`server started on 4000 PORT`)
+        })
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+
 app.get('/api/:reqvst', async (req, res, next) => {
     const {reqvst} = req.params
+    const link = await Link.create({"link": reqvst})
+    console.log(link)
 
     unirest
         .get(`https://www.google.com/search?q=${reqvst}&gl=us&hl=en`)
@@ -54,6 +69,3 @@ app.get('/api/:reqvst', async (req, res, next) => {
 
 })
 
-app.listen(4000, () => {
-    console.log('listening on port 4000!!!')
-})

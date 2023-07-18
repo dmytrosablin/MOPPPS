@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import One from "./one";
+import One from "./one.jsx";
 import axios from "axios";
 
 
