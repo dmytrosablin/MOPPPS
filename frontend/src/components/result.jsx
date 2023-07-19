@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import One from "./one.jsx";
-import axios from "axios";
 
 
 const Result = (props) => {
